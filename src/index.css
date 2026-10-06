@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+html {
+  overflow-y: scroll;
+  scrollbar-color: #15a84f white;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: white;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #15a84f;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2315A84F'/%3E%3C/svg%3E")
+      8 8,
+    auto;
+}
+
+button,
+.cursor-pointer,
+.cursor-grab,
+.cursor-grabbing {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2315A84F'/%3E%3C/svg%3E")
+      8 8,
+    pointer;
+}
+
+.gallery-scrollbar {
+  scrollbar-width: none;
+}
+
+.gallery-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-image {
+  image-rendering: auto;
+  image-rendering: smooth;
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M13 9L0.876 16L13 23Z' fill='%2315A84F'/%3E%3Cpath d='M19 9L31.124 16L19 23Z' fill='%2315A84F'/%3E%3C/svg%3E")
+      16 16,
+    e-resize;
+}
+
+.popout-image {
+  image-rendering: auto;
+  image-rendering: smooth;
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.cursor-grabbing .gallery-image {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2315A84F'/%3E%3C/svg%3E")
+      8 8,
+    grabbing;
+}
+
+.cursor-zoom-in {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='10' cy='10' r='6' fill='none' stroke='%2315A84F' stroke-width='3'/%3E%3Cpath d='M14.5 14.5L21 21' fill='none' stroke='%2315A84F' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E")
+      10 10,
+    zoom-in;
+}
+
+@keyframes accent-text-fade {
+  from {
+    color: #0038ab;
+  }
+  to {
+    color: #fd6d4a;
+  }
+}
+
+@keyframes accent-background-fade {
+  from {
+    background-color: #0038ab;
+  }
+  to {
+    background-color: #fd6d4a;
+  }
+}
+
+.accent-fade-text:hover {
+  animation: accent-text-fade 1.2s ease-in-out infinite alternate;
+}
+
+.accent-fade-background:hover {
+  animation: accent-background-fade 1.2s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accent-fade-text:hover {
+    animation: none;
+    color: #0038ab;
+  }
+
+  .accent-fade-background:hover {
+    animation: none;
+    background-color: #0038ab;
+  }
+}
+
+@media (max-width: 639px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}

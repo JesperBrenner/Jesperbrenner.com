@@ -1,0 +1,10 @@
+{
+  "description": "A minimalist personal website featuring a prominent title and smooth scrolling, ideal for showcasing individual identity or portfolio content.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
